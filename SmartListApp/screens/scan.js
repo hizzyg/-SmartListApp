@@ -2,7 +2,10 @@ import * as React from 'react';
 import { StyleSheet, Button, View, SafeAreaView, Text, Alert } from 'react-native';
 import { NavigationEvents } from 'react-navigation';
 import Navigator from '../navigator/homeStack';
+import {anan} from '../Component/FoodRepo/foodrepo_api';
 
+
+var test = anan();
 const Separator = () => (
   <View style={styles.separator} />
 );
@@ -13,6 +16,7 @@ const App = ({navigation}) => {
     <View>
       <Button
         title="Scan"
+        onPress={() => console.log(test)}
         //onPress={() => navigation.Alert.alert('Simple Button pressed')}
       />
     </View>
